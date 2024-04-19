@@ -16,7 +16,7 @@ mkdir out
 
 make vendor/caprip_defconfig ARCH=arm64 O=out CC=clang
 
-build_clang() {
+
     make -j$(nproc --all) \
     O=out \
     ARCH=arm64 \
@@ -25,4 +25,3 @@ build_clang() {
     CLANG_TRIPLE=aarch64-linux-gnu- \
     CROSS_COMPILE=aarch64-linux-android- \
     CROSS_COMPILE_ARM32=arm-linux-androideabi-
-}
